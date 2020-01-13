@@ -334,7 +334,7 @@ def get_desktop_pixmap(rect):
     """
     desktop = QtGui.QApplication.desktop()
     return QtGui.QPixmap.grabWindow(
-        desktop.winId(), rect.x(), rect.y(), rect.width(), rect.height()
+        long(desktop.winId()), rect.x(), rect.y(), rect.width(), rect.height()
     )
 
 
