@@ -382,10 +382,15 @@ class NoteWidget(ActivityStreamBaseWidget):
         """
         update with new note data
         """
-
         self._note_id = data["id"]
-
         # make the thumbnail clickable
+
+        # AMG edit start
+        import pprint
+
+        print "* data = %s" % pprint.pformat(data)
+        # AMG edit end
+
         self.ui.user_thumb.set_shotgun_data(data["user"])
 
         # the top left part of the note is the name of the author
