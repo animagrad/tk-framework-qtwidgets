@@ -388,7 +388,7 @@ class NoteWidget(ActivityStreamBaseWidget):
         # AMG edit start
         import pprint
 
-        print "* data = %s" % pprint.pformat(data)
+        # print "* data = %s" % pprint.pformat(data)
         # AMG edit end
 
         self.ui.user_thumb.set_shotgun_data(data["user"])
