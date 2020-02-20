@@ -389,8 +389,12 @@ class NoteWidget(ActivityStreamBaseWidget):
         import pprint
 
         # print "* data = %s" % pprint.pformat(data)
-        # AMG edit end
+        print "*** set_note_info data[user] = %s" % pprint.pformat((data["user"])
 
+        if not data["user"]:
+            return
+        
+        # AMG edit end
         self.ui.user_thumb.set_shotgun_data(data["user"])
 
         # the top left part of the note is the name of the author
