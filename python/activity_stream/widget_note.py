@@ -382,19 +382,9 @@ class NoteWidget(ActivityStreamBaseWidget):
         """
         update with new note data
         """
+
         self._note_id = data["id"]
 
-        # # AMG edit start
-        # import pprint
-
-        # # print "* data = %s" % pprint.pformat(data)
-        # print "*** set_note_info data[user] = %s" % pprint.pformat(data["user"])
-
-        # if not data["user"]:
-        #     return
-
-        # # AMG edit end
-        
         # make the thumbnail clickable
         self.ui.user_thumb.set_shotgun_data(data["user"])
 
