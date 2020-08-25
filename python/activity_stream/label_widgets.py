@@ -207,7 +207,12 @@ class UserThumbnail(ClickableLabel):
         :param sg_data: Shotgun user data
         """
         self._sg_data = sg_data
-        user_name = sg_data.get("name") or "Unknown User"
+        ### AMG begin
+        if sg_data:
+            user_name = sg_data.get("name") or "Unknown User"
+        else:
+            user_name = "Undefined User"
+        ### AMG end
         self.setToolTip(user_name)
 
     def mousePressEvent(self, event):
