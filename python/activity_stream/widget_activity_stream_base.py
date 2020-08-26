@@ -219,7 +219,10 @@ class ActivityStreamBaseWidget(QtGui.QWidget):
         :param data: activity stream data chunk
         :returns: string with url
         """
-
+        ### AMG begin
+        if not entity:
+            return ""
+        ### AMG end
         entity_type_display_name = shotgun_globals.get_type_display_name(entity["type"])
 
         if (
